@@ -8,7 +8,10 @@ import type { AppLoadContext, EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
 import { renderToReadableStream } from "react-dom/server";
+import { getEnv } from "./provider.server";
 
+const ABORT_DELAY = 5_000;
+global.ENV = getEnv()
 export default async function handleRequest(
   request: Request,
   responseStatusCode: number,

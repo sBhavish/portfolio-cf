@@ -1,5 +1,10 @@
 # Welcome to Remix + Cloudflare!
 
+[My Portfolio](https://bhavishs.pages.dev/)
+
+[Note] : This project was previously hosted on vercel and got migrated to Cloudflare.
+
+The very first version is under my own profile [here](https://github.com/sBhavish/Portfolio) with my original commits
 - 📖 [Remix docs](https://remix.run/docs)
 - 📖 [Remix Cloudflare docs](https://remix.run/guides/vite#cloudflare)
 
