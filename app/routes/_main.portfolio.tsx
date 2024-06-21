@@ -3,8 +3,8 @@ import { useLoaderData } from "@remix-run/react";
 import { CACHE_LIV, PAGE, PERPAGE, projects } from "~/Constants";
 import { Projects } from "~/DTO/project";
 
-import pb from "~/components/portfolio.server";
-import { WorkPreview } from "~/components/portfolio/cards";
+import pb from "~/compos/portfolio.server";
+import { WorkPreview } from "~/compos/portfolio/cards";
 export const meta: MetaFunction = () => {
     return [
         { title: "Featured Work | Bhavish Kotian" },
@@ -51,7 +51,7 @@ export default function PortfolioMain() {
                     </div>
                 </div>
                 <div className="mx-auto md:max-w-6xl">
-                    
+
                     <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                         {
                             projects.items?.filter(item => !item.todo)
@@ -61,7 +61,7 @@ export default function PortfolioMain() {
                                     )
                                 })
                         }
-                        
+
                     </div>
                 </div>
             </main>

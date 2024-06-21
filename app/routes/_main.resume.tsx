@@ -5,7 +5,7 @@ import { CompanyData } from "~/DTO/DTO";
 import envelope from "app/images/svg/envelope.svg";
 import me from "/app/images/me.jpeg"
 
-import pb from "~/components/portfolio.server";
+import pb from "~/compos/portfolio.server";
 export const meta: MetaFunction = () => {
     return [
         { title: `${new Date().getFullYear()} Resume` },

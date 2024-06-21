@@ -2,8 +2,8 @@ import { HeadersFunction, LoaderFunctionArgs, MetaFunction } from "@remix-run/no
 import { defer, useLoaderData } from "@remix-run/react";
 import { CACHE_LIV, projects } from "~/Constants";
 import { Item } from "~/DTO/project";
-import BlogHero from "~/components/blogs/blogHero";
-import pb from "~/components/portfolio.server";
+import BlogHero from "~/compos/blogs/blogHero";
+import pb from "~/compos/portfolio.server";
 import { generateSrcSet } from "~/images/resolutions";
 export const meta: MetaFunction = () => {
     return [
@@ -29,10 +29,10 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     return defer({ project: resultList });
 };
 export default function Index() {
-    const {project} = useLoaderData<typeof loader>()
+    const { project } = useLoaderData<typeof loader>()
     return (
         <>
-            <BlogHero light={true}  minor="Right Now...." major="What I'm Building" />
+            <BlogHero light={true} minor="Right Now...." major="What I'm Building" />
             <img
                 className="w-full h-auto"
                 src={`${ENV.BASE_URL}/api/files/${project.collectionId}/${project.id}/${project.heroImage}`}

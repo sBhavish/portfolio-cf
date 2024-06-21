@@ -2,9 +2,9 @@ import { HeadersFunction, MetaFunction } from "@remix-run/node";
 import { defer, useLoaderData } from "@remix-run/react";
 import { CACHE_LIV, PAGE, PERPAGE, blogs } from "~/Constants";
 import { Blogs } from "~/DTO/blog";
-import Featured from "~/components/blogs/Featured";
-import BlogHero from "~/components/blogs/blogHero";
-import pb from "~/components/portfolio.server";
+import Featured from "~/compos/blogs/Featured";
+import BlogHero from "~/compos/blogs/blogHero";
+import pb from "~/compos/portfolio.server";
 export let headers: HeadersFunction = () => {
     return {
         "Cache-Control": `public, s-maxage=${CACHE_LIV}`,

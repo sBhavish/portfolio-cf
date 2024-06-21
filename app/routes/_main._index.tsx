@@ -3,14 +3,14 @@ import { Await, useLoaderData } from "@remix-run/react";
 import { Suspense } from "react";
 import { CACHE_LIV, about } from "~/Constants";
 import { CompanyData } from "~/DTO/DTO";
-import ErrorIllustrator from "~/components/ErrorIllustrator";
-import Skeleton from "~/components/Skeleton";
-import HeroHome from "~/components/about/Hero";
-import About from "~/components/about/about";
-import Companies from "~/components/about/companies";
-import Goals from "~/components/about/goals";
-import Technologies from "~/components/about/technologies";
-import pb from "~/components/portfolio.server";
+import ErrorIllustrator from "~/compos/ErrorIllustrator";
+import Skeleton from "~/compos/Skeleton";
+import HeroHome from "~/compos/about/Hero";
+import About from "~/compos/about/about";
+import Companies from "~/compos/about/companies";
+import Goals from "~/compos/about/goals";
+import Technologies from "~/compos/about/technologies";
+import pb from "~/compos/portfolio.server";
 export let headers: HeadersFunction = () => {
   return {
     "Cache-Control": `public, s-maxage=${CACHE_LIV}`,
@@ -37,7 +37,7 @@ export const loader = async () => {
 };
 
 export default function Index() {
-  const { companies } = useLoaderData <typeof loader>()
+  const { companies } = useLoaderData<typeof loader>()
   return (
     <div>
       <HeroHome />

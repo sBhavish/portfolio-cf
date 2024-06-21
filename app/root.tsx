@@ -11,10 +11,10 @@ import {
 } from "@remix-run/react";
 import styles from "~/styles/root.css?url";
 import tailwindcss from "~/tailwind.css?url";
-import HeaderComponent from "./components/header";
-import FooterComponent from "./components/footer";
+import HeaderComponent from "./compos/header";
+import FooterComponent from "./compos/footer";
 import { getEnv } from "./provider.server";
-import LoadingTest from "./components/Loading";
+import LoadingTest from "./compos/Loading";
 
 export const links: LinksFunction = () => [
   {
